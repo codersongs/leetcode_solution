@@ -31,6 +31,6 @@ public class LengthOfLongestSubstring {
      * @return
      */
     public static int lengthOfLongestSubstring(String s) {
-
+        return 0;
     }
 }
