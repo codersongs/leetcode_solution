@@ -32,7 +32,7 @@ public class InorderTraversal {
         root.right = node1;
         node1.left = node2;
 
-        System.out.println(inorderTraversal2(root));
+        System.out.println(inorderTraversal(root));
     }
 
     /**
@@ -51,28 +51,6 @@ public class InorderTraversal {
         return result;
     }
 
-    /**
-     *
-     * @param root
-     * @return
-     */
-    public static List<Integer> inorderTraversal2(TreeNode root) {
-        TreeNode current = root;
-        Stack<TreeNode> stack = new Stack<>();
-        List<Integer> list = new ArrayList<>();
-        while( current != null||!stack.isEmpty() ){
-            while( current != null ){
-                stack.push(current);
-                current = current.left;
-            }
-            if( !stack.isEmpty() ){
-                current = stack.pop();
-                list.add(current.val);
-                current = current.right;
-            }
-        }
-        return list;
-    }
 }
 
 
